@@ -23,7 +23,7 @@ A simple testing environment is hosted with the application on the PythonAnywher
 
 ### I. Bitcoin core test network set up:
 
-1. Build the bitcoin core software: follow the steps for your preferred operating system :
+1. Build the bitcoin core software: follow the steps for your preferred operating system:
 
   * Install the <b>dependencies:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md
   * Build on <b>MacOS:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md
@@ -57,13 +57,13 @@ sudo apt-get upgrade
 ```
 **Step 2 : Install Python 3.5.2**
 
-Use the following commands to install custom python version :
+Use the following commands to install custom python version:
 ```
 sudo apt-get install python3==3.5.2
 ```
 **Step 3 : Install pip for Python 3.5.2**
 
-Use the following commands to install custom pip version :
+Use the following commands to install custom pip version:
 ```
 sudo apt install python3-pip
 ```
@@ -131,7 +131,7 @@ Enter the project root directory :
 ```
 cd TLDex/
 ```
-Create and activate virtual environment on project root directory :
+Create and activate virtual environment on project root directory:
 ```
 virtualenv env
 source env/bin/activate
@@ -140,11 +140,11 @@ Install project requirements :
 ```
 pip3 install -r requirements.txt
 ```
-Before we start the web server we need to run `Celery` background worker :
+Before we start the web server we need to run `Celery` background worker:
 ```
 celery -A DexWebSite worker -l info
 ```
-You Should see some output like this :
+You Should see some output like this:
 ```
 [tasks]
   . DexWebSite.celery.debug_task
@@ -158,7 +158,7 @@ You Should see some output like this :
 [2019-04-01 20:01:22,111: INFO/MainProcess] celery@username ready.
 
 ```
-Make migrations and run the DEX plateform :
+Make migrations and run the DEX plateform:
 ```
 python3 manage.py makemigrations
 python3 manage.py migrate
