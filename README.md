@@ -71,7 +71,7 @@ The project is still on development and is currently on running on <b>Linux Os !
 
 You can access the DEX platform on your localhost or via the link http://gastonmg.pythonanywhere.com where it is publicly hosted in the cloud paltform PythonAnywhere. PythonAnywhere is a platform as a service (PaaS) running on the cloud and serves as a public host for web applications developed in python frameworks (e.g Django). For more information please visit the website https://www.pythonanywhere.com
 
-<h2> Using the application:</h2>
+## Using the application
 Once you are on the DEX plateform, please follow the next steps:
 
   1. Sign up a new account: you need to signup using and email and password
@@ -86,8 +86,7 @@ Once you are on the DEX plateform, please follow the next steps:
 
   6. The Exchange cycle is then close. You can check the new balance of the used address and make sure it received the payment in crypto (bitcoin)
 
-
-## Conclusion
+### Conclusion
 
 As per the next steps, we will work on implementing the rest of functionalities of the DEX, and include services of the top used cryptos. In a further step, we will implement a generic fully decentralized exchange service component to make the exchange operation fully decentralized and token-independent. User thus can transparently exchange against any desired crypto-token.
 
