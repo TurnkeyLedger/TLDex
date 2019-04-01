@@ -43,23 +43,23 @@ The project is still on development and is currently on running on <b>Linux Os !
 
 <b>Initial setup :</b>
 
-1.Install a custom version of Python 
+  1.Install a custom version of Python 
 <ul>
   <li>apt-get install python3==3.5.2</li>
 </ul>
 
-2.Installing pip for Python3 
+  2.Installing pip for Python3 
 <ul>
   <li>sudo apt install python3-pip</li>
 </ul>
 
-3.Installing Virtualenv using pip3  
+  3.Installing Virtualenv using pip3  
 
 <ul>
   <li>pip3 install virtualenv</li>
 </ul>
 
-5.Download code source,create virtual environment,install requirements and run the TLdex website
+  5.Download code source,create virtual environment,install requirements and run the TLdex website
 
 <ul>
 <li>git clone https://github.com/TurnkeyLedger/TLDex.git</li>
@@ -72,7 +72,7 @@ The project is still on development and is currently on running on <b>Linux Os !
   <li>python3 manage.py runserver</li>
 </ul>
 
-6.Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
+  6.Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
 
 <h2> Accessing the DEX platform</h2>
 
@@ -81,20 +81,20 @@ You can access the DEX platform on your localhost or via the link http://gastonm
 <h2> Using the application:</h2>
 Once you are on the DEX plateform, please follow the next steps:
 
-1. Sign up a new account: you need to signup using and email and password
+  1. Sign up a new account: you need to signup using and email and password
 
-2. Login in into your already created profile
+  2. Login in into your already created profile
 
-3. Execute a payment in fiat through a service payment provider (e.g Paypal) providing the bitcoin wallet address to receive the payment in crypto(bitcoin). The address must be created by one of the nodes in the local test network. For the payment module as a service, we use Paypal sandbox as a test service. You can create an account in Paypal sandbox via this link https://www.paypal.com/us/webapps/mpp/account-selection and use the created account for your payment. That will provide you a testing Paypal payment interface.
+  3. Execute a payment in fiat through a service payment provider (e.g Paypal) providing the bitcoin wallet address to receive the payment in crypto(bitcoin). The address must be created by one of the nodes in the local test network. For the payment module as a service, we use Paypal sandbox as a test service. You can create an account in Paypal sandbox via this link https://www.paypal.com/us/webapps/mpp/account-selection and use the created account for your payment. That will provide you a testing Paypal payment interface.
 
-4. Starting the service: the crypto payment service is started automatically after the fiat payment is successfully completed.
+  4. Starting the service: the crypto payment service is started automatically after the fiat payment is successfully completed.
 
-5. Mining the block to confirm the transaction: the transaction is broadcast to the network and added to the “mempool" of each node in order to get mined with other available transactions. You can then mine the available transactions by generating the next block in the blockchain. The transaction is then confirmed and you will receive a confirmation notification and can also check the transaction receipt using the transaction hash. To do so, you can use the bitcoin-cli command line console to send RPC calls to the local bitcoin nodes. You can run the command bitcoin-cli help as an RPC call to have an overview of the available RPC methods. 
+  5. Mining the block to confirm the transaction: the transaction is broadcast to the network and added to the “mempool" of each node in order to get mined with other available transactions. You can then mine the available transactions by generating the next block in the blockchain. The transaction is then confirmed and you will receive a confirmation notification and can also check the transaction receipt using the transaction hash. To do so, you can use the bitcoin-cli command line console to send RPC calls to the local bitcoin nodes. You can run the command bitcoin-cli help as an RPC call to have an overview of the available RPC methods. 
 
-6. The Exchange cycle is then close. You can check the new balance of the used address and make sure it received the payment in crypto (bitcoin)
+  6. The Exchange cycle is then close. You can check the new balance of the used address and make sure it received the payment in crypto (bitcoin)
 
 
-Conclusion
+<h2>Conclusion</h2>
 
 As per the next steps, we will work on implementing the rest of functionalities of the DEX, and include services of the top used cryptos. In a further step, we will implement a generic fully decentralized exchange service component to make the exchange operation fully decentralized and token-independent. User thus can transparently exchange against any desired crypto-token.
 
