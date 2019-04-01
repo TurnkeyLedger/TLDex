@@ -23,7 +23,7 @@ A simple testing environment is hosted with the application on the PythonAnywher
 
 <h4>I. Bitcoin core test network set up:</h4>
 
-1. Build the bitcoin core software: follow the steps for your preferred operating system
+1. Build the bitcoin core software: follow the steps for your preferred operating system :
 
   - Install the <b>dependencies:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md
   - Build on <b>MacOS:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md
