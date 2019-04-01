@@ -59,7 +59,7 @@ sudo apt-get upgrade
 
 Use the following commands to install custom python version:
 ```
-sudo apt-get install python3==3.5.2
+sudo apt-get install python3.5
 ```
 **Step 3 : Install pip for Python 3.5.2**
 
