@@ -48,26 +48,26 @@ Before getting started, you need to:
 * Install RabbitMQ messaging broker
 
 ### Installing
-**Step 1 : update the system **
+**Step 1 : update the system**
 
 Use the following commands to update your system to the latest stable status:
 ```
 sudo apt-get update
 sudo apt-get upgrade
 ```
-**Step 2 : Install Python 3.5.2 **
+**Step 2 : Install Python 3.5.2**
 
 Use the following commands to install custom python version :
 ```
 apt-get install python3==3.5.2
 ```
-**Step 3 : Install pip for Python 3.5.2 **
+**Step 3 : Install pip for Python 3.5.2**
 
 Use the following commands to install custom pip version :
 ```
 sudo apt install python3-pip
 ```
-**Step4 : Install Erlang **
+**Step4 : Install Erlang**
 
 Since RabbitMQ is written in Erlang, you need to install Erlang before you can use RabbitMQ:
 ```
@@ -87,7 +87,7 @@ Eshell V9.1  (abort with ^G)
 ```
 Press `Ctrl+C` twice to quit the Erlang shell.
 
-**Step 5: Install RabbitMQ **
+**Step 5: Install RabbitMQ**
 
 Add the Apt repository to your Apt source list directory (`/etc/apt/sources.list.d`):
 ```
@@ -115,13 +115,13 @@ You can check the status of RabbitMQ:
 sudo rabbitmqctl status
 ```
 
-**Step7: Installing Virtualenv **
+**Step7: Installing Virtualenv**
 
 Use the following commands to install virtualenv
 ```
-pip3 install virtualenv
+pip3 install virtualenv1. Install RabbitMQ
 ```
-**Step8 : Download code source and run the web server **
+**Step8 : Download code source and run the web server**
 
 Dowload from source :
 ```
