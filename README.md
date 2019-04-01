@@ -21,7 +21,7 @@ A simple testing environment is hosted with the application on the PythonAnywher
 
 ## Setting up a local test environment:
 
-#### I. Bitcoin core test network set up:
+### I. Bitcoin core test network set up:
 
 1. Build the bitcoin core software: follow the steps for your preferred operating system :
 
@@ -35,11 +35,11 @@ Alternatively, you can install the precompiled version of bitcoin core provided 
 
 3. Test your nodes by trying multiple commands. For the complete list of available commands you can type the command bitcoin-cli help command. 
 
-#### II. Hosting the application on your local machine
+### II. Hosting the application on your local machine
 
 The project is still on development and is currently on running on **Ubuntu & Debian**
 
-### Prerequisites
+#### Prerequisites
 Before getting started, you need to:
 * Install a custom version of Python
 * Install pip for pyhton3
@@ -47,7 +47,7 @@ Before getting started, you need to:
 * Install Erlang
 * Install RabbitMQ messaging broker
 
-### Installing
+#### Installing
 **Step 1 : Update the system**
 
 Use the following commands to update your system to the latest stable status:
