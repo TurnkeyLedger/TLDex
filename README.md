@@ -49,6 +49,11 @@ Initial setup
 
 3.Download code source
 
+<ul>
+<li>Line 1</li>
+<li>Line 2</li>
+</ul>
+
 [cmd] git clone https://github.com/TurnkeyLedger/TLDex.git
 [cmd] cd TLDex
 [cmd] virtualenv env
