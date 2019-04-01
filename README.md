@@ -44,10 +44,12 @@ Initial setup
   <li>apt-get install python3==3.5.2</li>
 </ul>
 2.Installing Virtualenv using pip3
+
 <ul>
   <li>pip3 install virtualenv</li>
 </ul>
 3.Download code source
+
 <ul>
 <li>git clone https://github.com/TurnkeyLedger/TLDex.git</li>
 <li>cd TLDex/</li>
