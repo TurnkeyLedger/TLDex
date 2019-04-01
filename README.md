@@ -43,23 +43,23 @@ The project is still on development and is currently on running on <b>Linux Os !
 
 <b>Initial setup :</b>
 
-a.Install a custom version of Python 
+1.Install a custom version of Python 
 <ul>
   <li>apt-get install python3==3.5.2</li>
 </ul>
 
-b.Installing pip for Python3 
+2.Installing pip for Python3 
 <ul>
   <li>sudo apt install python3-pip</li>
 </ul>
 
-c.Installing Virtualenv using pip3  
+3.Installing Virtualenv using pip3  
 
 <ul>
   <li>pip3 install virtualenv</li>
 </ul>
 
-d.Download code source,create virtual environment,install requirements and run the TLdex website
+5.Download code source,create virtual environment,install requirements and run the TLdex website
 
 <ul>
 <li>git clone https://github.com/TurnkeyLedger/TLDex.git</li>
@@ -72,13 +72,13 @@ d.Download code source,create virtual environment,install requirements and run t
   <li>python3 manage.py runserver</li>
 </ul>
 
-e.Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
+6.Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
 
-II. Accessing the DEX platform
+<h2> Accessing the DEX platform</h2>
 
 You can access the DEX platform on your localhost or via the link http://gastonmg.pythonanywhere.com where it is publicly hosted in the cloud paltform PythonAnywhere. PythonAnywhere is a platform as a service (PaaS) running on the cloud and serves as a public host for web applications developed in python frameworks (e.g Django). For more information please visit the website https://www.pythonanywhere.com
 
-III. Using the application:
+<h2> Using the application:</h2>
 Once you are on the DEX plateform, please follow the next steps:
 
 1. Sign up a new account: you need to signup using and email and password
