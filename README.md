@@ -37,7 +37,7 @@ Alternatively, you can install the precompiled version of bitcoin core provided 
 
 #### II. Hosting the application on your local machine
 
-The project is still on development and is currently on running on **Linux Os !**
+The project is still on development and is currently on running on **UNIX !**
 
 1. Install a custom version of Python 
 ```
