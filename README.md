@@ -59,7 +59,7 @@ sudo apt-get upgrade
 
 Use the following commands to install custom python version :
 ```
-apt-get install python3==3.5.2
+sudo apt-get install python3==3.5.2
 ```
 **Step 3 : Install pip for Python 3.5.2**
 
@@ -114,17 +114,17 @@ You can check the status of RabbitMQ:
 ```
 sudo rabbitmqctl status
 ```
-
 **Step7: Installing Virtualenv**
 
 Use the following commands to install virtualenv
 ```
-pip3 install virtualenv1. Install RabbitMQ
+pip3 install virtualenv
 ```
 **Step8 : Download code source and run the web server**
 
 Dowload from source :
 ```
+cd ~
 git clone https://github.com/TurnkeyLedger/TLDex.git
 ```
 Enter the project root directory :
@@ -140,7 +140,7 @@ Install project requirements :
 ```
 pip3 install -r requirements.txt
 ```
-Before we start the web server we need to run the worker wish is celery :
+Before we start the web server we need to run `Celery` background worker :
 ```
 celery -A DexWebSite worker -l info
 ```
@@ -158,13 +158,13 @@ You Should see some output like this :
 [2019-04-01 20:01:22,111: INFO/MainProcess] celery@username ready.
 
 ```
-Make migrations and run the webserver :
+Make migrations and run the DEX plateform :
 ```
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py runserver
 ```
-Open a browser and navigate to `http://localhost:8000` you should see the TLdex home page.
+Open a browser and navigate to `http://localhost:8000` you should see the DEX plateform home page.
 
 ## Accessing the DEX platform
 
