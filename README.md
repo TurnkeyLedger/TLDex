@@ -40,25 +40,24 @@ c. Test your nodes by trying multiple commands. For the complete list of availab
 Initial setup
 
 1.Install a custom version of Python 
-
-[cmd] apt-get install python3==3.5.2
-
-2.Installing Virtualenv using pip3
-
-[cmd] pip3 install virtualenv
-
-3.Download code source
-
 <ul>
-<li>[cmd] git clone https://github.com/TurnkeyLedger/TLDex.git</li>
-<li>[cmd] cd TLDex</li>
-  <li>[cmd] virtualenv env</li>
-<li>[cmd] source env/bin/activate (for Linux/Mac OS ) or env\Scripts\activate.bat (for Windows)</li>
-  <li>[cmd] pip3 install -r requirements.txt</li>
-<li>[cmd] python manage.py migrate</li>
-  <li>[cmd] python manage.py runserver</li>
+  <li>apt-get install python3==3.5.2</li>
 </ul>
-
+2.Installing Virtualenv using pip3
+<ul>
+  <li>pip3 install virtualenv</li>
+</ul>
+3.Download code source
+<ul>
+<li>git clone https://github.com/TurnkeyLedger/TLDex.git</li>
+<li>cd TLDex/</li>
+  <li>virtualenv env</li>
+<li>source env/bin/activate (for Linux/Mac OS ) or env\Scripts\activate.bat (for Windows)</li>
+  <li>pip3 install -r requirements.txt</li>
+<li>python3 manage.py makemigrations </li>
+  <li>python3 manage.py migrate</li>
+  <li>python3 manage.py runserver</li>
+</ul>
 4.Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
 
 tbd
