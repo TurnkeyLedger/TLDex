@@ -37,32 +37,135 @@ Alternatively, you can install the precompiled version of bitcoin core provided 
 
 #### II. Hosting the application on your local machine
 
-The project is still on development and is currently on running on **UNIX !**
+The project is still on development and is currently on running on **Ubuntu & Debian**
 
-1. Install a custom version of Python 
+### Prerequisites
+Before getting started, you need to:
+* Install a custom version of Python
+* Install pip for pyhton3
+* Install virtualenv
+* Install Erlang
+* Install RabbitMQ messaging broker
+
+### Installing
+1. Install RabbitMQ
+**Step 1 : update the system **
+
+Use the following commands to update your system to the latest stable status:
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+**Step 2 : Install Python 3.5.2 **
+
+Use the following commands to install custom python version :
 ```
 apt-get install python3==3.5.2
 ```
-2. Installing pip for Python3 
+**Step 3 : Install pip for Python 3.5.2 **
+
+Use the following commands to install custom pip version :
 ```
 sudo apt install python3-pip
 ```
-3. Installing Virtualenv using pip3  
+**Step4 : Install Erlang **
+
+Since RabbitMQ is written in Erlang, you need to install Erlang before you can use RabbitMQ:
+```
+cd ~
+wget http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_20.1-1~ubuntu~xenial_amd64.deb
+sudo dpkg -i esl-erlang_20.1-1\~ubuntu\~xenial_amd64.deb
+```
+Verify your installation of Erlang:
+```
+erl
+```
+You will be brought into the Erlang shell which resembles:
+```
+Erlang/OTP 20 [erts-9.1] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:10] [hipe] [kernel-poll:false]
+
+Eshell V9.1  (abort with ^G)
+```
+Press `Ctrl+C` twice to quit the Erlang shell.
+
+**Step 5: Install RabbitMQ **
+
+Add the Apt repository to your Apt source list directory (`/etc/apt/sources.list.d`):
+```
+echo "deb https://dl.bintray.com/rabbitmq/debian xenial main" | sudo tee /etc/apt/sources.list.d/bintray.rabbitmq.list
+```
+Next add our public key to your trusted key list using `apt-key`:
+```
+wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo apt-key add -
+```
+Run the following command to update the package list:
+```
+sudo apt-get update
+```
+Install the rabbitmq-server package:
+```
+sudo apt-get install rabbitmq-server
+```
+**Step 6: Start the RabbitMQ Server**
+```
+sudo systemctl start rabbitmq-server.service
+sudo systemctl enable rabbitmq-server.service
+```
+You can check the status of RabbitMQ:
+```
+sudo rabbitmqctl status
+```
+
+**Step7: Installing Virtualenv **
+
+Use the following commands to install virtualenv
 ```
 pip3 install virtualenv
 ```
-4. Download code source,create virtual environment,install requirements and run the TLdex website
+**Step8 : Download code source and run the web server **
+
+Dowload from source :
 ```
 git clone https://github.com/TurnkeyLedger/TLDex.git
+```
+Enter the project root directory :
+```
 cd TLDex/
+```
+Create and activate virtual environment on project root directory :
+```
 virtualenv env
 source env/bin/activate
+```
+Install project requirements :
+```
 pip3 install -r requirements.txt
+```
+Before we start the web server we need to run the worker wish is celery :
+```
+celery -A DexWebSite worker -l info
+```
+You Should see some output like this :
+```
+[tasks]
+  . DexWebSite.celery.debug_task
+  . deposit.tasks.bitcoinpayment
+
+[2019-04-01 20:01:21,064: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2019-04-01 20:01:21,073: INFO/MainProcess] mingle: searching for neighbors
+[2019-04-01 20:01:22,093: INFO/MainProcess] mingle: all alone
+[2019-04-01 20:01:22,111: WARNING/MainProcess] /home/gaston/.local/lib/python3.5/site-packages/celery/fixups/django.py:200: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2019-04-01 20:01:22,111: INFO/MainProcess] celery@username ready.
+
+```
+Make migrations and run the webserver :
+```
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py runserver
 ```
-5. Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
+Open a browser and navigate to `http://localhost:8000` you should see the TLdex home page.
 
 ## Accessing the DEX platform
 
