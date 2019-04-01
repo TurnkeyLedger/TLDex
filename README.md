@@ -37,25 +37,31 @@ Alternatively, you can install the precompiled version of bitcoin core provided 
 
 #### II. Hosting the application on your local machine
 
-The project is still on development and is currently on running on <b>Linux Os !</b>
+The project is still on development and is currently on running on **Linux Os !**
 
 1. Install a custom version of Python 
-<ul><li>apt-get install python3==3.5.2</li></ul>
+```
+apt-get install python3==3.5.2
+```
 2. Installing pip for Python3 
-<ul><li>sudo apt install python3-pip</li></ul>
+```
+sudo apt install python3-pip
+```
 3. Installing Virtualenv using pip3  
-<ul><li>pip3 install virtualenv</li></ul>
+```
+pip3 install virtualenv
+```
 4. Download code source,create virtual environment,install requirements and run the TLdex website
-<ul>
-</li>git clone https://github.com/TurnkeyLedger/TLDex.git</li>
-</li>cd TLDex/</li>
-</li>virtualenv env</li>
-</li>source env/bin/activate</li>
-</li>pip3 install -r requirements.txt</li>
-</li>python3 manage.py makemigrations </li>
-</li>python3 manage.py migrate</li>
-</li>python3 manage.py runserver</li>
-
+```
+git clone https://github.com/TurnkeyLedger/TLDex.git
+cd TLDex/
+virtualenv env
+source env/bin/activate
+pip3 install -r requirements.txt
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver
+```
 5. Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
 
 ## Accessing the DEX platform
