@@ -19,9 +19,9 @@ The second approach is to run the application by visiting the following link    
 For testing purposes, a local blockchain (bitcoin) test network (regtest mode) needs to be put in place to complete the exchange cycle.
 A simple testing environment is hosted with the application on the PythonAnywhere platform and offers some testing nodes that can perform transactions between each other. In case of the use of a localhost on your local machine, you can set up your own local testing network as explained in the following steps.
 
-<h2>Setting up a local test environment:</h2>
+## Setting up a local test environment:
 
-<h4>I. Bitcoin core test network set up:</h4>
+#### I. Bitcoin core test network set up:
 
 1. Build the bitcoin core software: follow the steps for your preferred operating system :
 
@@ -35,12 +35,12 @@ Alternatively, you can install the precompiled version of bitcoin core provided 
 
 3. Test your nodes by trying multiple commands. For the complete list of available commands you can type the command bitcoin-cli help command. 
 
-<h4>II. Hosting the application on your local machine</h4>
+#### II. Hosting the application on your local machine
 
 The project is still on development and is currently on running on <b>Linux Os !</b>
 
-<h5>Initial setup :</h5>
-
+##### Initial setup :
+```
 1. Install a custom version of Python 
 
 * apt-get install python3==3.5.2
@@ -65,8 +65,9 @@ The project is still on development and is currently on running on <b>Linux Os !
 * python3 manage.py runserver
 
 5. Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
+```
 
-<h2> Accessing the DEX platform</h2>
+## Accessing the DEX platform
 
 You can access the DEX platform on your localhost or via the link http://gastonmg.pythonanywhere.com where it is publicly hosted in the cloud paltform PythonAnywhere. PythonAnywhere is a platform as a service (PaaS) running on the cloud and serves as a public host for web applications developed in python frameworks (e.g Django). For more information please visit the website https://www.pythonanywhere.com
 
@@ -86,7 +87,7 @@ Once you are on the DEX plateform, please follow the next steps:
   6. The Exchange cycle is then close. You can check the new balance of the used address and make sure it received the payment in crypto (bitcoin)
 
 
-<h2>Conclusion</h2>
+## Conclusion
 
 As per the next steps, we will work on implementing the rest of functionalities of the DEX, and include services of the top used cryptos. In a further step, we will implement a generic fully decentralized exchange service component to make the exchange operation fully decentralized and token-independent. User thus can transparently exchange against any desired crypto-token.
 
