@@ -19,7 +19,7 @@ The second approach is to run the application by visiting the following link    
 For testing purposes, a local blockchain (bitcoin) test network (regtest mode) needs to be put in place to complete the exchange cycle.
 A simple testing environment is hosted with the application on the PythonAnywhere platform and offers some testing nodes that can perform transactions between each other. In case of the use of a localhost on your local machine, you can set up your own local testing network as explained in the following steps.
 
-Setting up a local test environment:
+<h2>Setting up a local test environment:</h2>
 
 1. Bitcoin core test network set up:
 
