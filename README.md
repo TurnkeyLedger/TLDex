@@ -63,7 +63,7 @@ d.Download code source,create virtual environment,install requirements and run t
 <li>git clone https://github.com/TurnkeyLedger/TLDex.git</li>
 <li>cd TLDex/</li>
   <li>virtualenv env</li>
-<li>source env/bin/activate (for Linux/Mac OS )</li>
+<li>source env/bin/activate</li>
   <li>pip3 install -r requirements.txt</li>
 <li>python3 manage.py makemigrations </li>
   <li>python3 manage.py migrate</li>
