@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %} Payment Cancelled {% endblock %}
+
+{% block css %}
+    <!-- load custom css -->
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center mt-4 " style="color: red">Payment cancelled </h1>
+    <div id="payment-block" class="text-center">
+                    <span id="span-block-text"></span><br>
+                    <a id="span-block-number"></a>
+                </div>
+
+
+    <script type="text/javascript">
+
+    $('#span-block-text').html('if you not redirect automatically  after 5s click this link');
+                        $('#span-block-number').html("http://{{ url_ngrok }}{% url 'home' %}");
+        setTimeout(function () {
+                            window.location = "http://{{ url_ngrok }}{% url 'home' %}";
+                        }, 5000);
+
+    </script>
+
+{% endblock %}
+
+{% block script %}
+
+
+
+
+    <!-- load custom js -->
+{% endblock %}

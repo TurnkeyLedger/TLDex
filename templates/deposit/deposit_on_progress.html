@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+<title>{% block title %} OnProgress {% endblock %}</title>
+
+{% block css %}
+    <Style>
+        .dot {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+    </style>
+    <!-- load custom css -->
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="card-body" style="width:800px; margin:0 auto;">
+        <div class="card">
+            <div id="payment-title" class="text-info text-center">
+                <h2 class="text-center mt-3">Crypto Payment Infos</h2>
+            </div>
+            <div id="info-and-state" class="align-content-center">
+                <div id="payment-info" class="text-center">
+                    <p>Transaction of <br>
+                        Amount : {{ crypto_amount }} <b>BTC</b> <br>
+                        to Address : <b>{{ crypto_address }}</b></p>
+                </div>
+                <div id="payment-status" class="text-center">
+                    <p>Status</p>
+                    <span class="dot" id="status" style="background-color: red"></span>
+                    <p id="actual-payment-state"></p>
+                </div>
+                <div id="payment-block" class="text-center">
+                    <span id="span-block-text"></span><br>
+                    <a id="span-block-number"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    {{ ghassen }}
+
+    <!-- TODO get block hex from worker-->
+
+    {% csrf_token %}
+    <script type="text/javascript">
+        var p = $('#display_info');
+        setInterval(get_task_info("{{ task_id }}"), 200
+        );
+
+        function get_task_info(task_id_func) {
+            $.ajax({
+                type: 'GET',
+                url: "http://{{ url_ngrok }}{% url 'deposit:gettaskinfo' %}",
+                data: {'task_id': task_id_func},
+                success: function (data) {
+                    console.log(data.state);
+                    if (data.state == 'PROGRESS' || data.state == 'PENDING') {
+                        $("#status").css("background-color", "#FFA500");
+
+                        $('#actual-payment-state').html('PENDING!');
+
+
+                    } else if (data.state == 'SUCCESS') {
+                        $("#status").css("background-color", "green");
+
+                        $('#actual-payment-state').html('SUCCESS!');
+
+
+                        $('#span-block-text').html('if you not redirect automatically after 5s click this link');
+                        $('#span-block-number').html("http://{{ url_ngrok }}{% url 'home' %}");
+
+                        setTimeout(function () {
+                            window.location = "http://{{ url_ngrok }}{% url 'home' %}";
+                        }, 10000);
+
+                    }
+
+                    if (data.state != 'SUCCESS') {
+                        setTimeout(function () {
+                            get_task_info(task_id_func)
+                        }, 1000);
+                    }
+                },
+                error: function (data) {
+                    $('#p').html("Something went wrong!");
+                }
+            });
+        }
+
+    </script>
+
+{% endblock %}
+
+{% block script %}
+
+
+{% endblock %}

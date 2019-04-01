@@ -1,0 +1,321 @@
+{% extends 'base.html' %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} DEX G@$ {% endblock %}</title>
+
+
+    {% block css %}
+        <style type="text/css">
+            .header {
+                height: 60vh;
+                background-image: linear-gradient(to right bottom,
+                rgba(76, 216, 255, 0.8),
+                rgba(30, 108, 217, 0.8)),
+                url('https://cdn-images-1.medium.com/max/1200/0*dEblI0qzEW1oKC0B.png');
+
+                background-size: cover;
+                background-position: top;
+                position: relative;
+
+                clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+            }
+
+            .brand-box {
+                position: absolute;
+                top: 40px;
+                left: 40px;
+            }
+
+            .brand {
+                font-size: 20px;
+            }
+
+            .text-box {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .heading-primary {
+                color: #fff;
+                text-transform: uppercase;
+
+                backface-visibility: hidden;
+                margin-bottom: 30px;
+            }
+
+            .heading-primary-main {
+                display: block;
+                font-size: 26px;
+                font-weight: 400;
+                letter-spacing: 5px;
+            }
+
+            .heading-primary-sub {
+                display: block;
+                font-size: 18px;
+                font-weight: 700;
+                letter-spacing: 7.4px;
+            }
+
+            .btn:link,
+            .btn:visited {
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 10px 20px;
+                display: inline-block;
+                border-radius: 100px;
+                transition: all .2s;
+                position: relative;
+            }
+
+            .btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            .btn:active {
+                transform: translateY(-1px);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .btn-white {
+                background-color: #fff;
+                color: #777;
+                font-size: 14px;
+            }
+
+            #main-ul {
+                display: flex;
+                justify-content: center;
+                margin: 30px auto;
+                max-width: 760px;
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+            }
+
+            #main-ul li {
+                padding: 20px;
+            }
+
+            #main-ul a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            #main-ul li:hover {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            /*media queries*/
+            @media screen and (min-width: 0px) {
+                .toggle-nav {
+                    display: block;
+                }
+
+                #main-ul {
+                    display: none;
+                }
+            }
+
+            @media screen and (min-width: 700px) {
+                .toggle-nav {
+                    display: none;
+                }
+
+                #main-ul {
+                    display: flex;
+                }
+            }
+        </style>
+    {% endblock %}
+
+
+</head>
+
+{% block content %}
+
+
+    <header class="header">
+        <div class="text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary-main">Crypto Exchanger</span>
+                <span class="heading-primary-sub">Easy way to buy Bitcoin with Fiat</span>
+            </h1>
+            <a href="{% url 'deposit:buy' %}" class="btn btn-white btn-animated">Buy Now!</a>
+
+        </div>
+        <div class="brand-box">
+            <h1><span class="heading-primary-main">LOGO</span></h1>
+        </div>
+
+    </header>
+    <style type="text/css">
+        {
+            width: 100%
+        ;
+            margin: 0 auto
+        ;
+            margin-top: 75px
+        ;
+            height: 250px
+        ;
+            border: 1px solid black
+        ;
+        }
+        .serviceBox1, .serviceBox2, .serviceBox3, .serviceBox4, .serviceBox5 {
+            float: left;
+            width: 25%;
+        }
+
+        .box {
+            height: 60px;
+            background-color: white;
+            border: 1px solid #bdbdbd;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            -moz-box-shadow: 0 0 10px #bdbdbd;
+            -webkit-box-shadow: 0 0 10px #bdbdbd;
+            box-shadow: 0 0 10px #bdbdbd;
+        }
+    </style>
+
+    <div class="box">
+    <h2 class="text-center mt-2">Coinbase Price</h2>
+    </div>
+    <div id="serviceBox">
+        <div class="serviceBox1">
+            <div class="box">
+                <table>
+                    <th>
+                    <td>
+                        <tr>
+                            <img aria-label="Bitcoin logo " class="Image-daFSPM kDUAXi ml-2 mt-2"
+                                 src="https://dynamic-assets.coinbase.com/e785e0181f1a23a30d9476038d9be91e9f6c63959b538eabbc51a1abc8898940383291eede695c3b8dfaa1829a9b57f5a2d0a16b0523580346c6b8fab67af14b/asset_icons/b57ac673f06a4b0338a596817eb0a50ce16e2059f327dc117744449a47915cb2.png"
+                                 alt="Bitcoin logo" width="36" height="36"
+                                 style="margin-right: 24px;">
+                        </tr>
+                        <tr>
+                            <b>Bitcoin</b>
+                        </tr>
+                        <tr>
+                            BTC
+                        </tr>
+                        <tr><b><span id="btcprice"></span></b></tr>
+
+                    </td>
+
+                </table>
+            </div>
+        </div>
+        <div class="serviceBox2">
+            <div class="box">
+                <table>
+                    <td>
+                        <tr>
+                            <img aria-label="Ethereum logo " class="Image-daFSPM kDUAXi ml-2 mt-2"
+                                 src="https://dynamic-assets.coinbase.com/7796fb1bd5752a156c77e0b1fa28fb17e93d03b4b8e2dcff58dcaf8f99b2e4a3c3af2cd905d5536761c54ac273d62d91a38ef8e5702fa988c37264e7aba36b3b/asset_icons/3af4b33bde3012fd29dd1366b0ad737660f24acc91750ee30a034a0679256d0b.png"
+                                 alt="Ethereum logo" width="36" height="36"
+                                 style="margin-right: 24px;">
+                        </tr>
+                        <tr>
+                            <b>Ethereum</b>
+
+                        </tr>
+                        <tr>
+                            ETH
+                        </tr>
+                        <tr><b><span id="ethprice"></span></b></tr>
+
+                    </td>
+                </table>
+
+            </div>
+        </div>
+        <div class="serviceBox3">
+            <div class="box">
+
+                <table>
+                    <td>
+                        <tr>
+                            <img aria-label="Litecoin logo " class="Image-daFSPM kDUAXi mt-2 ml-2"
+                                 src="https://dynamic-assets.coinbase.com/f018870b721574ef7f269b9fd91b36042dc05ebed4ae9dcdc340a1bae5b359e8760a8c224bc99466db704d10a3e23cf1f4cd1ff6f647340c4c9c899a9e6595cd/asset_icons/984a4fe2ba5b2c325c06e4c2f3ba3f1c1fef1f157edb3b8ebbfe234340a157a5.png"
+                                 alt="Litecoin logo" width="36" height="36"
+                                 style="margin-right: 24px;">
+                        </tr>
+                        <tr>
+                            <b>Litecoin</b>
+
+                        </tr>
+                        <tr>
+                            LTC
+                        </tr>
+                        <tr><b><span id="ltcprice"></span></b></tr>
+
+                    </td>
+                </table>
+            </div>
+        </div>
+        <div class="serviceBox4">
+            <div class="box">
+                <table>
+                    <td>
+                        <tr>
+                            <img aria-label="Bitcoin Cash logo "
+                                 class="Image-daFSPM kDUAXi mt-2 ml-2"
+                                 src="https://dynamic-assets.coinbase.com/93a4303d1b0410b79bb1feac01020e4e7bdf8e6ece68282d0af2c7d0b481c5f5c44c0cec1d7071ae8f84674dbd139e290d50a038a6a4c1bbc856ec0871b5f3e2/asset_icons/3af4b33bde3012fd29dd1366b0ad737660f24acc91750ee30a034a0679256d0b.png"
+                                 alt="Bitcoin Cash logo" width="36" height="36"
+                                 style="margin-right: 24px;">
+                        </tr>
+                        <tr>
+                            <b>Bitcoin Cash</b>
+
+                        </tr>
+                        <tr>
+                            BCH
+                        </tr>
+                        <tr><b><span id="bchprice"></span></b></tr>
+
+                    </td>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    {% csrf_token %}
+    <script type="text/javascript">
+
+        setInterval(get_task_info(), 15 * 60 * 1000
+        );
+
+        function get_task_info(task_id_func) {
+            $.ajax({
+                type: 'GET',
+                url: "http://{{ url_ngrok }}{% url 'deposit:getprice' %}",
+                data: {'currencyCode': 'usd'},
+                success: function (data) {
+                    $('#btcprice').html('$' + data.btcprice.amount);
+                    $('#ethprice').html('$' + data.ethprice.amount);
+                    $('#ltcprice').html('$' + data.ltcprice.amount);
+                    $('#bchprice').html('$' + data.bchprice.amount);
+
+                    console.log(data);
+
+                },
+                error: function (data) {
+                    console.log("Something went wrong!")
+                }
+            });
+        }
+
+    </script>
+
+
+
+{% endblock %}
+

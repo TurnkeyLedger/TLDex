@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+<title>{% block title %} BuyCryptoFiat {% endblock %}</title>
+
+{% block css %}
+    <!-- load custom css -->
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form method="post" action="{% url 'deposit:processdeposit' %}">{% csrf_token %}
+
+        <div class="card-body" style="width:800px; margin:0 auto;">
+            <div class="card">
+
+
+                <div class="row justify-content-center">
+                    <div class="col-10">
+
+                        {{ form|crispy }}
+
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 ">
+                        <button type="submit" class="btn btn-outline-success float-right mb-4 mt-2">CONFIRM & MAKE DEPOSIT
+                        </button>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </form>
+
+
+
+{% endblock %}
+
+{% block script %}
+    <!-- load custom js -->
+{% endblock %}

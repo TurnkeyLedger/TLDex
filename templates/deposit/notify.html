@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+<title>{% block title %} Notify {% endblock %}</title>
+
+{% block css %}
+    <!-- load custom css -->
+{% endblock %}
+
+
+{% block content %}
+{% if data %}
+
+    <h1>{{ data }}</h1>
+    {% endif %}
+
+{% endblock %}
+
+{% block script %}
+    {% csrf_token %}
+    <script type="text/javascript">
+        $.ajax({
+                type: 'POST',
+                url:"http://{{ url_ngrok }}{% url 'deposit:onprogress' %}",
+                dataType: 'json',
+                data:{'ghassen' : 'hellooo' },
+                success:function () {
+                    console.log('nnnnnn');
+                }
+            });
+
+    console.log('leeeeeeeeeeee');
+
+    </script>
+{% endblock %}

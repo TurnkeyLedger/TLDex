@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+<title>{% block title %} BuyCryptoFiat {% endblock %}</title>
+
+{% block css %}
+    <!-- load custom css -->
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form method="post" action="{% url 'withdraw:process' %}">
+        {% csrf_token %}
+        <!--<div class="justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                {{ form.amount|as_crispy_field }}
+            </div>
+            <div class="col-4">
+                {{ form.fiat_Curency|as_crispy_field }}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-8">
+                {{ form.payment_Options|as_crispy_field }}
+            </div>
+
+            <div class="col-8">
+                {{ form.address|as_crispy_field }}
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-4">
+                <button type="submit" class="btn btn-success float-left">CONFIRM & WITHDRAW PROGRESS</button>
+            </div>
+
+        </div>
+
+            </div>-->
+
+
+        <div class="card-body" style="width:800px; margin:0 auto;">
+            <div class="card">
+
+
+                <div class="row justify-content-center">
+                    <div class="col-10">
+
+                        <div class="row justify-content-center">
+                            <div class="col-6">
+                                {{ form.amount|as_crispy_field }}
+                            </div>
+                            <div class="col-6">
+                                {{ form.fiat_Curency|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                {{ form.payment_Options|as_crispy_field }}
+                            </div>
+
+                            <div class="col-12">
+                                {{ form.address|as_crispy_field }}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-outline-success float-right mb-4 mt-2">CONFIRM & MAKE WITHDRAW
+                        </button>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </form>
+{% endblock %}
+
+{% block script %}
+    <!-- load custom js -->
+{% endblock %}

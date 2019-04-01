@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+<title>{% block title %} BuyCryptoFiat {% endblock %}</title>
+
+{% block css %}
+    <!-- load custom css -->
+{% endblock %}
+{% block content %}
+
+
+<div class="card-body" style="width:800px; margin:0 auto;">
+        <div class="card">
+            <div id="payment-title" class="text-info text-center">
+                <h2 class="text-info text-center mt-3">Payment Infos</h2>
+            </div>
+            <div id="info-and-state" class="align-content-center">
+                <div id="payment-info" class="text-center mb-4">
+                    <p>Hey {{ dicts.custom }}<br>
+                                You will pay : {{ dicts.amount }} <b>{{ dicts.currency_code }}</b> <br>
+                                You will get : {{ dicts.btc_amount }} <b>BTC</b></p>
+                </div>
+                <div id="payment-status" class="text-center">
+                    {% csrf_token %}
+                    {{ form.render }}
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block script %}
+    <!-- load custom js -->
+{% endblock %}

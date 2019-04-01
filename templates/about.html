@@ -1,0 +1,51 @@
+{% extends 'custombase.html' %}
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en-US">
+<head>
+    <!-- The above 3 meta tags *must* come first in the head -->
+    <title>{% block title %} About {% endblock %}</title>
+
+    {% block css %}
+        <!-- load custom css -->
+    {% endblock %}
+</head>
+<body>
+{% block header %}
+
+{% endblock %}
+
+
+{% block content %}
+    <div class="card-body" style="width:800px; margin:0 auto;">
+        <div class="card">
+            <div  class="text-info text-center">
+                <h1 class="text-center mt-2" style="color: rebeccapurple">About</h1>
+            </div>
+            <div class="align-content-center">
+                <div  class="text-center">
+
+                <div  class="text-center">
+
+                </div>
+                <div  class="text-center">
+
+                </div>
+            </div>
+            <div  class="text-center mt-4">
+
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+{% block script %}
+    <!-- load custom js -->
+{% endblock %}
+<footer>
+
+</footer>
+</body>
+</html>
