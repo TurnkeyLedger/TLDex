@@ -39,23 +39,23 @@ c. Test your nodes by trying multiple commands. For the complete list of availab
 
 Initial setup
 
-1.Install a custom version of Python 
+a.Install a custom version of Python 
 <ul>
   <li>apt-get install python3==3.5.2</li>
 </ul>
 
-2.Installing pip for Python3 
+b.Installing pip for Python3 
 <ul>
   <li>sudo apt install python3-pip</li>
 </ul>
 
-3.Installing Virtualenv using pip3  
+c.Installing Virtualenv using pip3  
 
 <ul>
   <li>pip3 install virtualenv</li>
 </ul>
 
-4.Download code source and run the TLdex website
+d.Download code source and run the TLdex website
 
 <ul>
 <li>git clone https://github.com/TurnkeyLedger/TLDex.git</li>
@@ -68,15 +68,14 @@ Initial setup
   <li>python3 manage.py runserver</li>
 </ul>
 
-5.Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
+e.Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
 
-tbd
+II. Accessing the DEX platform
 
-II. Access the DEX platform from the web server:
+You can access the DEX platform on your localhost or via the link http://gastonmg.pythonanywhere.com where it is publicly hosted in the cloud paltform PythonAnywhere. PythonAnywhere is a platform as a service (PaaS) running on the cloud and serves as a public host for web applications developed in python frameworks (e.g Django). For more information please visit the website https://www.pythonanywhere.com
 
-You can access the DEX platform via the link http://gastonmg.pythonanywhere.com where it is hosted. The PythonAnywhere platform is a platform as a service (PaaS) running on the cloud and serves as a public host for web applications developed with python frameworks (Django in our case). For more information please visit the website https://www.pythonanywhere.com
-
-III. Testing the application:
+III. Using the application:
+Once you are on the DEX plateform, please follow the next steps:
 
 1. Sign up a new account: you need to signup using and email and password
 
