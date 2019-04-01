@@ -43,23 +43,23 @@ The project is still on development and is currently on running on <b>Linux Os !
 
 <b>Initial setup :</b>
 
-  1.Install a custom version of Python 
+  1. Install a custom version of Python 
 <ul>
   <li>apt-get install python3==3.5.2</li>
 </ul>
 
-  2.Installing pip for Python3 
+  2. Installing pip for Python3 
 <ul>
   <li>sudo apt install python3-pip</li>
 </ul>
 
-  3.Installing Virtualenv using pip3  
+  3. Installing Virtualenv using pip3  
 
 <ul>
   <li>pip3 install virtualenv</li>
 </ul>
 
-  5.Download code source,create virtual environment,install requirements and run the TLdex website
+  4. Download code source,create virtual environment,install requirements and run the TLdex website
 
 <ul>
 <li>git clone https://github.com/TurnkeyLedger/TLDex.git</li>
@@ -72,7 +72,7 @@ The project is still on development and is currently on running on <b>Linux Os !
   <li>python3 manage.py runserver</li>
 </ul>
 
-  6.Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
+  5. Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
 
 <h2> Accessing the DEX platform</h2>
 
