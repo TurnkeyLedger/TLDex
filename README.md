@@ -43,23 +43,25 @@ Initial setup
 <ul>
   <li>apt-get install python3==3.5.2</li>
 </ul>
-2.Installing Virtualenv using pip3
+2.Installing Virtualenv using pip3  
 
 <ul>
   <li>pip3 install virtualenv</li>
 </ul>
-3.Download code source
+
+3.Download code source  
 
 <ul>
 <li>git clone https://github.com/TurnkeyLedger/TLDex.git</li>
 <li>cd TLDex/</li>
   <li>virtualenv env</li>
-<li>source env/bin/activate (for Linux/Mac OS ) or env\Scripts\activate.bat (for Windows)</li>
+<li>source env/bin/activate (for Linux/Mac OS )</li>
   <li>pip3 install -r requirements.txt</li>
 <li>python3 manage.py makemigrations </li>
   <li>python3 manage.py migrate</li>
   <li>python3 manage.py runserver</li>
 </ul>
+
 4.Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
 
 tbd
