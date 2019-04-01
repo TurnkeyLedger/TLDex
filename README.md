@@ -37,7 +37,9 @@ c. Test your nodes by trying multiple commands. For the complete list of availab
 
 2. Hosting the application on your local machine
 
-Initial setup : requirement <b>Linux Os !</b>
+The project is still on development and is currently on running on <b>Linux Os !</b>
+
+<b>Initial setup :</b>
 
 a.Install a custom version of Python 
 <ul>
