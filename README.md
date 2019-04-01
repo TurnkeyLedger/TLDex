@@ -37,7 +37,32 @@ c. Test your nodes by trying multiple commands. For the complete list of availab
 
 2. Hosting the application on your local machine
 
-tbd
+Initial setup
+
+1.Install a custom version of Python 
+
+[cmd] apt-get install python3==3.5.2
+
+2.Installing Virtualenv using pip3
+
+[cmd] pip3 install virtualenv
+
+
+3.Download code source
+
+[cmd] `git clone https://github.com/MedGaSToN/DexExchange.git`
+[cmd] `cd DexExchange`
+[cmd] `virtualenv env`
+[cmd] `source env/bin/activate (for Linux/Mac OS ) or env\Scripts\activate.bat (for Windows)`
+[cmd] `pip install -r requirements.txt`
+[cmd] `cd django_project/`
+[cmd] `python manage.py migrate`
+[cmd] `python manage.py runserver`
+
+
+4.Open a browser and navigate to http://localhost:8000
+
+you should see the TLdex home page
 
 tbd
 
