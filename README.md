@@ -39,7 +39,6 @@ Alternatively, you can install the precompiled version of bitcoin core provided 
 
 The project is still on development and is currently on running on <b>Linux Os !</b>
 
-```
 1. Install a custom version of Python 
 <ul><li>apt-get install python3==3.5.2</li></ul>
 2. Installing pip for Python3 
@@ -58,7 +57,6 @@ The project is still on development and is currently on running on <b>Linux Os !
 </li>python3 manage.py runserver</li>
 
 5. Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
-```
 
 ## Accessing the DEX platform
 
