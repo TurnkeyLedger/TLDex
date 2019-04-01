@@ -44,6 +44,11 @@ Initial setup
   <li>apt-get install python3==3.5.2</li>
 </ul>
 
+1.Install a custom version of Python 
+<ul>
+  <li>sudo apt install python3-pip</li>
+</ul>
+
 2.Installing Virtualenv using pip3  
 
 <ul>
