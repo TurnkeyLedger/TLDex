@@ -48,7 +48,7 @@ Before getting started, you need to:
 * Install RabbitMQ messaging broker
 
 ### Installing
-**Step 1 : update the system**
+**Step 1 : Update the system**
 
 Use the following commands to update your system to the latest stable status:
 ```
