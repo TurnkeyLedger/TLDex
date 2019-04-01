@@ -21,9 +21,9 @@ A simple testing environment is hosted with the application on the PythonAnywher
 
 <h2>Setting up a local test environment:</h2>
 
-1. Bitcoin core test network set up:
+<h4>I. Bitcoin core test network set up:</h4>
 
-a. build the bitcoin core software: follow the steps for your preferred operating system
+1. build the bitcoin core software: follow the steps for your preferred operating system
 <ul>
   <li>Install the <b>dependencies:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md</li>
   <li>Build on <b>MacOS:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md</li>
@@ -33,11 +33,11 @@ a. build the bitcoin core software: follow the steps for your preferred operatin
 </ul>
 Alternatively, you can install the precompiled version of bitcoin core provided in this link https://bitcoincore.org/en/download/ please check your system requirements before installing, and make sure everything is compatible.
 
-b. Once bitcoin core is installed on your machine you will have executables among of them “bitcoind" and “bitcoin-cli”. For testing purposes, we will set up some local test nodes (bitcoin clients) in "regtest" mode as our private bitcoin Testnet, means that they are private, local and all the data (transactions, blocks, mining etc..) are controlled by the user through the bitcoin-cli command set. You can follow this tutorial (https://www.yours.org/content/connecting-multiple-bitcoin-core-nodes-in-regtest-5fdc9c47528b) to set up some nodes on your local machine, note that in order to test transactions you will need to have at least 2 nodes and a third one as a mining node.
+2. Once bitcoin core is installed on your machine you will have executables among of them “bitcoind" and “bitcoin-cli”. For testing purposes, we will set up some local test nodes (bitcoin clients) in "regtest" mode as our private bitcoin Testnet, means that they are private, local and all the data (transactions, blocks, mining etc..) are controlled by the user through the bitcoin-cli command set. You can follow this tutorial (https://www.yours.org/content/connecting-multiple-bitcoin-core-nodes-in-regtest-5fdc9c47528b) to set up some nodes on your local machine, note that in order to test transactions you will need to have at least 2 nodes and a third one as a mining node.
 
-c. Test your nodes by trying multiple commands. For the complete list of available commands you can type the command bitcoin-cli help command. 
+3. Test your nodes by trying multiple commands. For the complete list of available commands you can type the command bitcoin-cli help command. 
 
-2. Hosting the application on your local machine
+<h4>II. Hosting the application on your local machine</h4>
 
 The project is still on development and is currently on running on <b>Linux Os !</b>
 
