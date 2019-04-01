@@ -23,14 +23,12 @@ A simple testing environment is hosted with the application on the PythonAnywher
 
 <h4>I. Bitcoin core test network set up:</h4>
 
-1. build the bitcoin core software: follow the steps for your preferred operating system
-<ul>
-  <li>Install the <b>dependencies:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md</li>
-  <li>Build on <b>MacOS:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md</li>
-  <li>Build on <b>Unix:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-unix.md</li>
-  <li>Build on <b>Windows:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-windows.md
-</li>
-</ul>
+1. Build the bitcoin core software: follow the steps for your preferred operating system
+
+  -Install the <b>dependencies:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md
+  -Build on <b>MacOS:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md
+  -Build on <b>Unix:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-unix.md
+  -Build on <b>Windows:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-windows.md
 Alternatively, you can install the precompiled version of bitcoin core provided in this link https://bitcoincore.org/en/download/ please check your system requirements before installing, and make sure everything is compatible.
 
 2. Once bitcoin core is installed on your machine you will have executables among of them “bitcoind" and “bitcoin-cli”. For testing purposes, we will set up some local test nodes (bitcoin clients) in "regtest" mode as our private bitcoin Testnet, means that they are private, local and all the data (transactions, blocks, mining etc..) are controlled by the user through the bitcoin-cli command set. You can follow this tutorial (https://www.yours.org/content/connecting-multiple-bitcoin-core-nodes-in-regtest-5fdc9c47528b) to set up some nodes on your local machine, note that in order to test transactions you will need to have at least 2 nodes and a third one as a mining node.
@@ -41,36 +39,31 @@ Alternatively, you can install the precompiled version of bitcoin core provided 
 
 The project is still on development and is currently on running on <b>Linux Os !</b>
 
-<b>Initial setup :</b>
+<h5>Initial setup :</h5>
 
-  1. Install a custom version of Python 
-<ul>
-  <li>apt-get install python3==3.5.2</li>
-</ul>
+1. Install a custom version of Python 
 
-  2. Installing pip for Python3 
-<ul>
-  <li>sudo apt install python3-pip</li>
-</ul>
+- apt-get install python3==3.5.2
 
-  3. Installing Virtualenv using pip3  
+2. Installing pip for Python3 
 
-<ul>
-  <li>pip3 install virtualenv</li>
-</ul>
+- sudo apt install python3-pip
+  
+3. Installing Virtualenv using pip3  
 
-  4. Download code source,create virtual environment,install requirements and run the TLdex website
+- pip3 install virtualenv
 
-<ul>
-<li>git clone https://github.com/TurnkeyLedger/TLDex.git</li>
-<li>cd TLDex/</li>
-  <li>virtualenv env</li>
-<li>source env/bin/activate</li>
-  <li>pip3 install -r requirements.txt</li>
-<li>python3 manage.py makemigrations </li>
-  <li>python3 manage.py migrate</li>
-  <li>python3 manage.py runserver</li>
-</ul>
+4. Download code source,create virtual environment,install requirements and run the TLdex website
+
+-git clone https://github.com/TurnkeyLedger/TLDex.git
+- cd TLDex/
+- virtualenv env
+-source env/bin/activate
+-pip3 install -r requirements.txt
+-python3 manage.py makemigrations 
+-python3 manage.py migrate
+-python3 manage.py runserver
+
 
   5. Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
 
