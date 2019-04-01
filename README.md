@@ -50,13 +50,13 @@ Initial setup
 3.Download code source
 
 <ul>
-<li>[cmd] `git clone https://github.com/TurnkeyLedger/TLDex.git`</li>
-<li>[cmd] `cd TLDex`</li>
-  <li>[cmd] `virtualenv env`</li>
-<li>[cmd] `source env/bin/activate (for Linux/Mac OS ) or env\Scripts\activate.bat (for Windows)`</li>
-  <li>[cmd] `pip3 install -r requirements.txt`</li>
-<li>[cmd] `python manage.py migrate`</li>
-  <li>[cmd] `python manage.py runserver`</li>
+<li>[cmd] git clone https://github.com/TurnkeyLedger/TLDex.git</li>
+<li>[cmd] cd TLDex</li>
+  <li>[cmd] virtualenv env</li>
+<li>[cmd] source env/bin/activate (for Linux/Mac OS ) or env\Scripts\activate.bat (for Windows)</li>
+  <li>[cmd] pip3 install -r requirements.txt</li>
+<li>[cmd] python manage.py migrate</li>
+  <li>[cmd] python manage.py runserver</li>
 </ul>
 
 4.Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
