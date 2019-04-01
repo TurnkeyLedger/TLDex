@@ -25,10 +25,10 @@ A simple testing environment is hosted with the application on the PythonAnywher
 
 1. Build the bitcoin core software: follow the steps for your preferred operating system
 
-  -Install the <b>dependencies:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md
-  -Build on <b>MacOS:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md
-  -Build on <b>Unix:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-unix.md
-  -Build on <b>Windows:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-windows.md
+  - Install the <b>dependencies:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md
+  - Build on <b>MacOS:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md
+  - Build on <b>Unix:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-unix.md
+  - Build on <b>Windows:</b> https://github.com/bitcoin/bitcoin/blob/master/doc/build-windows.md
 Alternatively, you can install the precompiled version of bitcoin core provided in this link https://bitcoincore.org/en/download/ please check your system requirements before installing, and make sure everything is compatible.
 
 2. Once bitcoin core is installed on your machine you will have executables among of them “bitcoind" and “bitcoin-cli”. For testing purposes, we will set up some local test nodes (bitcoin clients) in "regtest" mode as our private bitcoin Testnet, means that they are private, local and all the data (transactions, blocks, mining etc..) are controlled by the user through the bitcoin-cli command set. You can follow this tutorial (https://www.yours.org/content/connecting-multiple-bitcoin-core-nodes-in-regtest-5fdc9c47528b) to set up some nodes on your local machine, note that in order to test transactions you will need to have at least 2 nodes and a third one as a mining node.
@@ -55,17 +55,16 @@ The project is still on development and is currently on running on <b>Linux Os !
 
 4. Download code source,create virtual environment,install requirements and run the TLdex website
 
--git clone https://github.com/TurnkeyLedger/TLDex.git
+- git clone https://github.com/TurnkeyLedger/TLDex.git
 - cd TLDex/
 - virtualenv env
--source env/bin/activate
--pip3 install -r requirements.txt
--python3 manage.py makemigrations 
--python3 manage.py migrate
--python3 manage.py runserver
+- source env/bin/activate
+- pip3 install -r requirements.txt
+- python3 manage.py makemigrations 
+- python3 manage.py migrate
+- python3 manage.py runserver
 
-
-  5. Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
+5. Open a browser and navigate to http://localhost:8000 you should see the TLdex home page
 
 <h2> Accessing the DEX platform</h2>
 
