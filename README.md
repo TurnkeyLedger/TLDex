@@ -57,7 +57,7 @@ c.Installing Virtualenv using pip3
   <li>pip3 install virtualenv</li>
 </ul>
 
-d.Download code source and run the TLdex website
+d.Download code source,create virtual environment,install requirements and run the TLdex website
 
 <ul>
 <li>git clone https://github.com/TurnkeyLedger/TLDex.git</li>
