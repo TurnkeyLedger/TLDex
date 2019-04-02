@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %} DEX G@$ {% endblock %}</title>
+    <title>{% block title %} TLDEX {% endblock %}</title>
 
 
     {% block css %}
@@ -49,9 +49,9 @@
 
             .heading-primary-main {
                 display: block;
-                font-size: 26px;
+                font-size: 36px;
                 font-weight: 400;
-                letter-spacing: 5px;
+                letter-spacing: 7px;
             }
 
             .heading-primary-sub {
@@ -142,14 +142,17 @@
     <header class="header">
         <div class="text-box">
             <h1 class="heading-primary">
-                <span class="heading-primary-main">Crypto Exchanger</span>
+                <span class="heading-primary-main">Decentralized Exchanger</span>
                 <span class="heading-primary-sub">Easy way to buy Bitcoin with Fiat</span>
             </h1>
             <a href="{% url 'deposit:buy' %}" class="btn btn-white btn-animated">Buy Now!</a>
 
         </div>
         <div class="brand-box">
-            <h1><span class="heading-primary-main">LOGO</span></h1>
+            <h1><img aria-label="TL logo " class="Image-daFSPM kDUAXi ml-2 mt-2"
+                                   src="{% static "logo.png" %}"
+                                   alt="TL logo" width="120" height="120"
+                                   style="margin-right: 40px;"></h1>
         </div>
 
     </header>
