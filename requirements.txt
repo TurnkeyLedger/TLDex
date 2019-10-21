@@ -17,7 +17,7 @@ django-cors-headers==2.5.2
 django-crispy-forms==1.7.2	
 django-paypal==0.5.0	
 django-registration==3.0	
-ecdsa==0.13	
+ecdsa==0.13.3	
 enum-compat==0.0.2	
 exchangerates==0.2.0	
 fft==0.1
