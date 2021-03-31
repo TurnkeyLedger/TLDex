@@ -26,7 +26,7 @@ idna==2.8
 include==0.2.2	
 json-rpc==1.12.1	
 kombu==4.4.0	
-lxml==3.7.3	
+lxml==4.6.3	
 numpy==1.16.2	
 paypalrestsdk==1.13.1	
 pip==10.0.1	
