@@ -29,7 +29,7 @@ kombu==4.4.0
 lxml==3.7.3	
 numpy==1.16.2	
 paypalrestsdk==1.13.1	
-pip==10.0.1	
+pip==19.2	
 pyOpenSSL==19.0.0	
 pycryptodome==3.8.0	
 python-bitcoinlib==0.10.1	
