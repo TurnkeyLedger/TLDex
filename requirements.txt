@@ -6,7 +6,7 @@ base58check==1.0.2
 billiard==3.5.0.5	
 bitcoin==1.1.42	
 blockchain==1.4.4	
-celery==4.2.1	
+celery==5.2.2	
 cffi==1.12.2	
 chardet==3.0.4	
 coinbase==2.1.0	
