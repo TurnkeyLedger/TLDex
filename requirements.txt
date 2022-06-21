@@ -27,7 +27,7 @@ include==0.2.2
 json-rpc==1.12.1	
 kombu==4.4.0	
 lxml==3.7.3	
-numpy==1.16.2	
+numpy==1.22.0	
 paypalrestsdk==1.13.1	
 pip==10.0.1	
 pyOpenSSL==19.0.0	
