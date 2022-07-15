@@ -12,7 +12,7 @@ chardet==3.0.4
 coinbase==2.1.0	
 confusable-homoglyphs==3.2.0	
 cryptography==2.5	
-django-celery-results==1.0.4	
+django-celery-results==2.4.0	
 django-cors-headers==2.5.2	
 django-crispy-forms==1.7.2	
 django-paypal==0.5.0	
